@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Secrets</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3498db;
+            color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            transition: height 0.5s ease-in-out; /* Added transition for smooth height changes */
+        }
+
+        .container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #ecf0f1;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2ecc71;
+            color: #ecf0f1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+
+        /* Style for the secrets container */
+        .secrets-container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #34495e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none; /* Initially hide the container */
+        }
+
+        h2 {
+            color: #ecf0f1;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #2c3e50;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            li {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Awesome Secrets Page!</h1>
+        <p>
+            Explore a world of intriguing secrets and tips that will make your life
+            more interesting.
+        </p>
+        <p>Click the button below to uncover the mysteries!</p>
+        <button onclick="revealSecrets()">Discover Secrets</button>
+    </div>
+
+    <div class="secrets-container" id="secretsContainer">
+        <h2>Web Dev & AI Secrets</h2>
+        <ul>
+            <li>
+                Some websites use machine learning algorithms to predict and display
+                content that will keep you engaged.
+            </li>
+            <li>
+                Deep within the code, there's a hidden function that adds a touch of
+                creativity to the user interface.
+            </li>
+            <li>
+                Web developers have secret debates about the eternal question: Tabs or
+                spaces?
+            </li>
+            <li>
+                Behind every secure login page, there's an intricate dance of
+                cryptographic protocols safeguarding your data.
+            </li>
+            <li>
+                AI chatbots are programmed to respond to "I love you" with a polite and
+                friendly acknowledgment.
+            </li>
+            <li>
+                In the dark corners of the internet, cybersecurity experts engage in
+                ethical hacking to strengthen digital defenses.
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript function to toggle the visibility of the secrets container and adjust body height
+        function revealSecrets() {
+            var container = document.getElementById("secretsContainer");
+            if (container.style.display === "none") {
+                container.style.display = "block"; // Show the container
+                document.body.style.height = "auto"; // Allow body height to adjust dynamically
+            } else {
+                container.style.display = "none";
+                document.body.style.height = "100vh";
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
